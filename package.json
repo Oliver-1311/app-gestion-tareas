@@ -6,9 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-database":"node scripts/database.js",
+    "start-database": "node scripts/database.js",
     "dev": "nodemon src/index.js"
-
   },
   "keywords": [],
   "author": "",
@@ -16,7 +15,8 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "mongoose": "^8.3.1"
+    "mongoose": "^8.3.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"

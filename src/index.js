@@ -2,8 +2,9 @@ import express from "express";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import connectDB from "../scripts/database.js";
-import Task from "./task.js";
+import Task from "./tasks.js";
 import dotenv from "dotenv";
+import userRoutes from "./routes/users.js";
 
 // importamos las variables de entorno
 dotenv.config();
@@ -45,6 +46,8 @@ app.get("/", (req, res) => {
   res.send("hello worl");
 });
 
+// APP USER ROUTES
+app.use("/api/users", userRoutes);
 app.listen(PORT, () => {
   console.log("_____--APPP WITH EXPRESS________");
   console.log(`App listening on port: http://localhost:${PORT}`);
